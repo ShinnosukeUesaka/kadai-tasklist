@@ -1,0 +1,16 @@
+
+<h1 style="text-align:center;">Task List</h1>
+<center>
+<div class="taskcontainer" style="width:400px;border: 5px solid red;">
+<ul>
+<% @tasks.each do |task| %>
+<li style="font-size:30px; list-style: none;text-align:left;">
+<%= link_to task.content, task %> <span> | </span>
+<%= link_to "Done", task, method: :delete, data: { confirm: 'このタスクを削除します'} %>
+</li>
+
+<% end %>
+</ul>
+
+<%= link_to "新規", new_task_path %>
+</cente>
