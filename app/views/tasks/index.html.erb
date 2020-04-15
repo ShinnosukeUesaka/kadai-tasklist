@@ -4,9 +4,10 @@
 <div class="taskcontainer" style="width:400px;border: 5px solid red;">
 <ul>
 <% @tasks.each do |task| %>
-<li style="font-size:30px; list-style: none;text-align:left;">
-<%= link_to task.content, task %> <span> | </span>
-<%= link_to "Done", task, method: :delete, data: { confirm: 'このタスクを削除します'} %>
+<li style="font-size:30px; text-align:left;">
+<%= link_to task.content, task %> <span> | </span> <%= task.status %>
+<br>
+<%= link_to "Finished", task, method: :delete, data: { confirm: 'このタスクを削除します'} %>
 </li>
 
 <% end %>

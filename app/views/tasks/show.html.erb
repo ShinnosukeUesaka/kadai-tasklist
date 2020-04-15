@@ -2,7 +2,9 @@
 <h1>
     <%= @task.content %>
 </h1>
-    <%= link_to '削除', @task, method: :delete, data: { confirm: 'このタスクを削除します'}%>
-    <%= link_to '編集', edit_task_path(@task) %>
-    <br>
-    <%= link_to 'トップに戻る', tasks_path %>
+
+<p>ステータス: <%= @task.status %></p>
+<%= link_to '削除', @task, method: :delete, data: { confirm: 'このタスクを削除します'}%>
+<%= link_to '編集', edit_task_path(@task) %>
+<br>
+<%= link_to 'トップに戻る', tasks_path %>
