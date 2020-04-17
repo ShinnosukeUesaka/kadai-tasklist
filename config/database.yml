@@ -47,8 +47,11 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+
 production:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: kadai-board_production
   username: kadai-board
-  password: <%= ENV['KADAI-BOARD_DATABASE_PASSWORD'] %>
+  password: <%= ENV['MESSAGE-BOARD_DATABASE_PASSWORD'] %>
