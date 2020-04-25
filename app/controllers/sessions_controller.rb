@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     case login(email, password)
     when 0
       flash[:success] = 'ログイン成功'
-      redirect_to @user
+      redirect_to root_url
     when 1
       flash[:danger] = 'ユーザーが存在しません。'
       render :new
