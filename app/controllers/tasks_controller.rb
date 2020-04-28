@@ -9,6 +9,7 @@ class TasksController < ApplicationController
   end
 
   def show
+    
   end
 
   def new
@@ -50,7 +51,8 @@ class TasksController < ApplicationController
   private
   
   def set_task
-    @task = current_user.tasks.find(params[:id])
+    #@task = current_user.tasks.find(params[:id]) //deny other user
+    @task = User.tasks.find(params[:id])
   end
   
   def task_params
