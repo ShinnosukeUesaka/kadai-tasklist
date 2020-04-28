@@ -8,4 +8,4 @@
 <p>Number of tasks: <%#= @user. %></p>
 <%= link_to 'My Tasks', tasks_path %>
 <br>
-<%= link_to '退会', user_path, method: 'delete' %>
+<%= link_to '退会', user_path, method: 'delete', data: { confirm: "You sure?" }%>
